@@ -1,33 +1,33 @@
 import sys
 from lexer.lexer import *
 
-file_stream = open(sys.argv[1], "r")
-lex_file = open(sys.argv[2], "r")
+lexer_file = open(sys.argv[1], "r")
+code_file = open(sys.argv[2], "r")
 
 if "-s" in sys.argv:
     out_tokens = open("output.txt", "w")
 
-strs = [l for l in file_stream]
-lex = []
-for el in strs:
-    lexeme = el[:-1].split()
-    lex.append({'name': lexeme[0], 'expr': lexeme[1]})
+strings_lexeme = [l for l in lexer_file]
+dict_lexeme = []
+for str in strings_lexeme:
+    lexeme = str[:-1].split()
+    dict_lexeme.append({'name': lexeme[0], 'expr': lexeme[1]})
 
-lexer = Lexer([(l['expr'], l['name']) for l in lex])
-lexer.input(lex_file.read())
+lexer = Lexer([(l['expr'], l['name']) for l in dict_lexeme])
+lexer.input(code_file.read())
 
 try:
-    for tok in lexer.return_tokens():
+    for one_token in lexer.return_tokens():
         if "-s" in sys.argv:
-            out_tokens.write(str(tok) + "\n")
+            out_tokens.write(str(one_token) + "\n")
         else:
-            print(tok)
-except LexerError as err:
+            print(one_token)
+except Error as err:
     print('LexMeError at position %s' % err.pos)
 
 if "-s" in sys.argv:
     out_tokens.close()
     print "Saved to output.txt"
 
-file_stream.close()
-lex_file.close()
+lexer_file.close()
+code_file.close()

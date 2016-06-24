@@ -1,4 +1,4 @@
-__all__ = ["LexerError"]
-class LexerError(Exception):
-    def __init__(self, pos):
-        self.pos = pos
+__all__ = ["Error"]
+class Error(Exception):
+    def __init__(self, position):
+        self.posistion = position

@@ -13,14 +13,15 @@ class Lexer(object):
         self.input_string = input_string
 
     def return_tokens(self):
-        while 1:
+        token_result = True
+        while token_result:
             token_result = self.token()
-            if token_result is None: break
+            if not token_result: break
             yield token_result
 
     def token(self):
         if self.position >= len(self.input_string):
-            return None
+            return False
 
         for regex, type in self.rules:
             reg_result = regex.match(self.input_string, self.position)
@@ -29,4 +30,4 @@ class Lexer(object):
                 self.position = reg_result.end()
                 return token_string
 
-        raise LexerError(self.position)
+        raise Error(self.position)
