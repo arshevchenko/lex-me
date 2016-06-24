@@ -45,7 +45,7 @@ After them, write in terminal:
 
 By default, it prints result in terminal, but if you add key "-s" the result of work will be saved in output.txt (with folder package):
 
-    python lex-me path/to/lex_file path/to/code_file -s
+    python lex-me -s path/to/lex_file path/to/code_file
 
 ----------
 
