@@ -6,4 +6,6 @@ class Token(object):
         self.pos_e = pos_e
 
     def __str__(self):
+        # Return the result as string
+        # <TOKEN_NAME, TEXT, START_POS, END_POS>
         return '<%s, %s, %s, %s>' % (self.type, self.val, self.pos_s, self.pos_e)
