@@ -5,28 +5,28 @@ import re
 class Lexer(object):
     def __init__(self, rules):
         self.rules = []
-        for regex, type in rules:
-            self.rules.append((re.compile(regex), type))
+        for expression, name in rules:
+            self.rules.append((re.compile(expression), name))
 
-    def input(self, buf):
-        self.buf = buf
-        self.pos = 0
+    def input(self, input_string):
+        self.position = 0
+        self.input_string = input_string
+
+    def return_tokens(self):
+        while 1:
+            token_result = self.token()
+            if token_result is None: break
+            yield token_result
 
     def token(self):
-        if self.pos >= len(self.buf):
+        if self.position >= len(self.input_string):
             return None
 
         for regex, type in self.rules:
-            m = regex.match(self.buf, self.pos)
-            if m:
-                tok = Token(type, m.group(), self.pos, m.end())
-                self.pos = m.end()
-                return tok
+            reg_result = regex.match(self.input_string, self.position)
+            if reg_result:
+                token_string = Token(type, reg_result.group(), self.position, reg_result.end())
+                self.position = reg_result.end()
+                return token_string
 
-        raise LexerError(self.pos)
-
-    def tokens(self):
-        while 1:
-            tok = self.token()
-            if tok is None: break
-            yield tok
+        raise LexerError(self.position)

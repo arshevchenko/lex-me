@@ -17,7 +17,7 @@ lexer = Lexer([(l['expr'], l['name']) for l in lex])
 lexer.input(lex_file.read())
 
 try:
-    for tok in lexer.tokens():
+    for tok in lexer.return_tokens():
         if "-s" in sys.argv:
             out_tokens.write(str(tok) + "\n")
         else:
