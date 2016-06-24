@@ -1,4 +1,5 @@
 from tokenizer import *
+from err import *
 import re
 
 class Lexer(object):
@@ -6,7 +7,6 @@ class Lexer(object):
         self.rules = []
         for regex, type in rules:
             self.rules.append((re.compile(regex), type))
-
 
     def input(self, buf):
         self.buf = buf

@@ -6,9 +6,4 @@ class Token(object):
         self.pos_e = pos_e
 
     def __str__(self):
-        return '<%s , %s, %s, %s>' % (self.type, self.val, self.pos_s, self.pos_e)
-
-
-class LexerError(Exception):
-    def __init__(self, pos):
-        self.pos = pos
+        return '<%s, %s, %s, %s>' % (self.type, self.val, self.pos_s, self.pos_e)
