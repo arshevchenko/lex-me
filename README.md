@@ -2,14 +2,12 @@
 Lex-analyzer based on Python 2.7
 
 
-----------
 ## Installation
 Clone this repository to your local folder. Remember, you need Python 2.7 for launching this package.
 
     git clone https://github.com/shev2dev/lex-me.git
 
 
-----------
 
 
 ## Usage
@@ -36,6 +34,10 @@ Take this peace of code as code example file:
 
     if num = 0 then 1 else num * factorial(num - 1) fi
 
+
+----------
+
+
 ### Launching
 After them, write in terminal:
 
@@ -44,6 +46,9 @@ After them, write in terminal:
 By default, it prints result in terminal, but if you add key "-s" the result of work will be saved in output.txt:
 
     python lex-me path/to/lex_file path/to/code_file -s
+
+----------
+
 ### Result
 As result you will get lines of tokens like this :
 `<TOKEN_NAME, TEXT, POSITION_START, POSITION_END>`
@@ -79,9 +84,6 @@ Result of launching example:
     <WHITE,  , 47, 48>
     <FI, fi, 48, 50>
     <WHITE, \n, 50, 51>
-
-
-----------
 
 
 ## Dependecies
