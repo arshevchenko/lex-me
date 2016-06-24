@@ -1,3 +1,7 @@
+"""
+    Created by Artem Shevchenko 24/06/2016
+"""
+
 class Token(object):
     def __init__(self, type, val, pos_s, pos_e):
         self.type = type
