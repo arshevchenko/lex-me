@@ -53,7 +53,7 @@ By default, it prints result in terminal, but if you add key "-s" the result of 
 As result you will get lines of tokens like this :
 `<TOKEN_NAME, TEXT, POSITION_START, POSITION_END>`
 
-Result of launching example:
+Result of example launching:
 
     <IF, if, 0, 2>
     <WHITE,  , 2, 3>
