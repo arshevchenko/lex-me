@@ -55,36 +55,35 @@ As result you will get lines of tokens like this :
 
 Result of example launching:
 
-    <IF, if, 0, 2>
-    <WHITE,  , 2, 3>
-    <ID, num, 3, 6>
-    <WHITE,  , 6, 7>
-    <EQUAL, =, 7, 8>
-    <WHITE,  , 8, 9>
-    <NUMBER, 0, 9, 10>
-    <WHITE,  , 10, 11>
-    <THEN, then, 11, 15>
-    <WHITE,  , 15, 16>
-    <NUMBER, 1, 16, 17>
-    <WHITE,  , 17, 18>
-    <ELSE, else, 18, 22>
-    <WHITE,  , 22, 23>
-    <ID, num, 23, 26>
-    <WHITE,  , 26, 27>
-    <MULT, *, 27, 28>
-    <WHITE,  , 28, 29>
-    <ID, factorial, 29, 38>
-    <LPAR, (, 38, 39>
-    <ID, num, 39, 42>
-    <WHITE,  , 42, 43>
-    <MINUS, -, 43, 44>
-    <WHITE,  , 44, 45>
-    <NUMBER, 1, 45, 46>
-    <RPAR, ), 46, 47>
-    <WHITE,  , 47, 48>
-    <FI, fi, 48, 50>
-    <WHITE, \n, 50, 51>
-
+    <IF, if, 0, 1>
+    <WHITE,  , 2, 2>
+    <ID, num, 3, 5>
+    <WHITE,  , 6, 6>
+    <EQUAL, =, 7, 7>
+    <WHITE,  , 8, 8>
+    <NUMBER, 0, 9, 9>
+    <WHITE,  , 10, 10>
+    <THEN, then, 11, 14>
+    <WHITE,  , 15, 15>
+    <NUMBER, 1, 16, 16>
+    <WHITE,  , 17, 17>
+    <ELSE, else, 18, 21>
+    <WHITE,  , 22, 22>
+    <ID, num, 23, 25>
+    <WHITE,  , 26, 26>
+    <MULT, *, 27, 27>
+    <WHITE,  , 28, 28>
+    <ID, factorial, 29, 37>
+    <LPAR, (, 38, 38>
+    <ID, num, 39, 41>
+    <WHITE,  , 42, 42>
+    <MINUS, -, 43, 43>
+    <WHITE,  , 44, 44>
+    <NUMBER, 1, 45, 45>
+    <RPAR, ), 46, 46>
+    <WHITE,  , 47, 47>
+    <FI, fi, 48, 49>
+    <WHITE, \n, 50, 50>
 
 ## Dependecies
 - Python 2.7

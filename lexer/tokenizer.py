@@ -7,7 +7,7 @@ class Token(object):
         self.type = type
         self.val = val.encode('string-escape')
         self.pos_s = pos_s
-        self.pos_e = pos_e
+        self.pos_e = pos_e - 1
 
     def __str__(self):
         # Return the result as string
