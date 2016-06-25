@@ -30,7 +30,7 @@ For creation of your own lexical analyzer just create a file with your lexeme de
     WHITE     \s
 
 
-Take this peace of code as code example file:
+Take this piece of code as code example file:
 
     if num = 0 then 1 else num * factorial(num - 1) fi
 
